@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación Personal Willians Leonardo Malque Zurita</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+       
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color:blue;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .formato {
+            text-align: center;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:ghostwhite;
+            border: 5px solid black;
+            border-radius: 5px;
+        }
+        .material-icons{
+            font-size: 2.5em;
+            color: cornflowerblue;
+            vertical-align: bottom;
+        }
+
+        img {
+           border: 3px solid skyblue;
+        }
+
+
+        video {
+            border: 3px solid skyblue;
+        }
+
+
+        form {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        label, input {
+            text-align: left;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>Mi Página Personal</h1>
+   
+    <div class="formato">
+        <h2>WILLIANS LEONARDO MALQUE ZURITA
+        </h2>
+        <img src="fotografia.png" alt="Mi Foto" width="100">
+        <h2>Presentación personal</h2>
+        <p>Mi nombre es Willians Leonardo Malque Zurita, tengo 22 años, nací en la ciudad de Arequipa y actualmente 
+            soy estudiante de la carrera de Diseño y Desarrollo de Software en Tecsup.</p>
+        
+            <a  href="https://tecsup.instructure.com/profile" target="_blank">WILLIANS LEONARDO MALQUE ZURITA</a>
+        
+        <a  href="https://tecsup.instructure.com/profile" target="_blank">WILLIANS LEONARDO MALQUE ZURITA</a>
+        <h2>Sobre Mí</h2>
+        <p>Me apasiona el mundo de la tecnología, tanto los nuevos avances en hardware como todo lo relacionado con 
+            la programación. Mi hobby favorito es realizar cualquier tipo de deporte, pero el que más me gusta es el
+             fútbol. Mi plato favorito es el ceviche y la causa rellena.</p>
+
+        <h2>Tecnologías y lenguajes de programación</h2>
+        <video width="180" height="80" controls>
+            <source src="lenguajes pro.mp4" type="video/mp4">
+        </video>
+        <p>1.- Lenguaje de Java básico</p>
+        <p>2.- Lenguaje de consulta SQL básico</p>
+        <p>3.- Lenguaje de etiquetas HTML básico</p>
+        <p>4.- Lenguaje de diseño CSS básico</p>
+
+        
+        <h2>Formación profesional</h2>
+        <img src="tecsup.png" alt="Logo Tecsup" width="100">
+        <p>Estudiante del tercer semestre en Tecsup</p>
+
+        <h3>Idiomas</h3>
+        <img src="idiomas.png" alt="Idiomas" width="100">
+        <p>1. Español</p>
+        <p>2. Inglés</p>
+
+        <h2>Recomendaciones</h2>
+        <form>
+            <label for="nombre">Nombre:</label><br/>
+                <input type="text" id="nombre" name="nombre"
+                placeholder="Escribe tu nombre" required="true"/><br/>
+                <label for="apellido">Recomendacion</label><br/>
+                <input type="text" id="recomendacion" name="recomendacion"
+                placeholder="Escribe tu recomendacion" required="ture"/><br/>
+                <input type="submit" value="Enviar"/>
+                <input type="submit" formnovalidate="formnovalidate"
+                value="Enviar sin validar">
+        </form>
+    </div>
+</body>
+</html>
