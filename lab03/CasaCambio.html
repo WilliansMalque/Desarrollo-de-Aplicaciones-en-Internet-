@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Casa de Cambio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: skyblue;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px black;
+            border-radius: 5px;
+        }
+
+        label, select, input, button {
+            display: block;
+            margin: 10px 0;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: skyblue;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Casa de Cambio</h1>
+    <form id="cambioForm">
+        <label for="monto">Monto a cambiar:</label>
+        <input type="number" id="monto" step="0.01" min="0" required>
+        
+        <label for="monedaOrigen">Moneda de origen:</label>
+        <select id="monedaOrigen" required>
+            <option value="dolar">Dólar</option>
+            <option value="soles">Soles</option>
+            <option value="euros">Euros</option>
+        </select>
+        
+        <label for="monedaDestino">Moneda de destino:</label>
+        <select id="monedaDestino" required>
+            <option value="dolar">Dólar</option>
+            <option value="soles">Soles</option>
+            <option value="euros">Euros</option>
+        </select>
+        
+        <button type="button" onclick="calcularCambio()">Calcular Cambio</button>
+    </form>
+
+    <script>
+        function calcularCambio() {
+            const monto = parseFloat(document.getElementById("monto").value);
+            const monedaOrigen = document.getElementById("monedaOrigen").value;
+            const monedaDestino = document.getElementById("monedaDestino").value;
+
+          
+
+            const tasasCambio = {
+                dolar: {
+                    soles: 3.8,
+                    euros: 0.85,
+                },
+                soles: {
+                    dolar: 0.26,
+                    euros: 0.22,
+                },
+                euros: {
+                    dolar: 1.18,
+                    soles: 4.55,
+                },
+            };
+
+            const tasa = tasasCambio[monedaOrigen][monedaDestino];
+            const total = monto * tasa;
+
+            alert(`Total a recibir: ${total.toFixed(2)} ${monedaDestino}`);
+        }
+    </script>
+</body>
+</html>
